@@ -10,6 +10,7 @@ import Summary from 'components/Summary/Summary.react';
 import Section from 'components/Section/Section.react.js'
 import Track from 'components/Track/Track.react';
 import tracks from 'data/tracks';
+import Resources from 'components/Resources/Resources.react';
 
 export default class App extends React.Component {
 
@@ -90,6 +91,17 @@ export default class App extends React.Component {
                  description={track.description} />
               )
             })}
+          </Section>
+          <Section title='Resources' scrollId='resources'>
+            <div className={styles.hardware}>
+                As hackCWRU V is hosted in the 7 story Sears think[box], everyone has access to top-of-the-line 3D printers, numerous laser cutters, a fully equiped wood shop, and more state of the art equipment. In addition to all of that, MLH will supply new and cool technology for everyone to use.
+            </div>
+            <div className={styles.software}>
+                Sears think[box] has many computers featuring all the software necessary to complete your project. This software can be used for 3D-printing and laser cutting, or just for planning our your project.
+            </div>
+            <div className={styles.swag}>
+                Of course, there will be lots of SWAG. In addition to MLH SWAG, we will also have exclusive hackCWRU V SWAG.
+            </div>
           </Section>
           <Section title='FAQs' scrollId='faqs'>
             {this.state.faqs.length > 0 ? this.state.faqs.map((faq, index) => {
